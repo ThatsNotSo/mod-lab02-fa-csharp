@@ -49,20 +49,20 @@ namespace fans
         State InitialState = a;
         public FA1()
         {
-            a.Transitions['0'] = d;
-            a.Transitions['1'] = e;
+            a.Transitions['0'] = b;
+            a.Transitions['1'] = b;
 
-            b.Transitions['0'] = b;
-            b.Transitions['1'] = b;
+            b.Transitions['0'] = d;
+            b.Transitions['1'] = c;
 
-            c.Transitions['0'] = b;
+            c.Transitions['0'] = d;
             c.Transitions['1'] = c;
 
-            d.Transitions['0'] = b;
+            d.Transitions['0'] = d;
             d.Transitions['1'] = c;
 
             e.Transitions['0'] = c;
-            e.Transitions['1'] = e;
+            e.Transitions['1'] = a;
         }
 
         public bool? Run(IEnumerable<char> s)
@@ -116,20 +116,20 @@ namespace fans
 
         public FA2()
         {
-            a.Transitions['1'] = d;
-            a.Transitions['0'] = e;
+            a.Transitions['1'] = b;
+            a.Transitions['0'] = c;
 
-            b.Transitions['1'] = b;
-            b.Transitions['0'] = b;
+            b.Transitions['1'] = e;
+            b.Transitions['0'] = d;
 
-            c.Transitions['1'] = b;
-            c.Transitions['0'] = c;
+            c.Transitions['1'] = d;
+            c.Transitions['0'] = e;
 
-            d.Transitions['1'] = b;
-            d.Transitions['0'] = c;
+            d.Transitions['1'] = c;
+            d.Transitions['0'] = b;
 
-            e.Transitions['1'] = c;
-            e.Transitions['0'] = e;
+            e.Transitions['1'] = b;
+            e.Transitions['0'] = c;
         }
 
         public bool? Run(IEnumerable<char> s)
@@ -175,15 +175,15 @@ namespace fans
         public FA3()
         {
             a.Transitions['0'] = a;
-            a.Transitions['1'] = b;
+            a.Transitions['1'] = d;
 
             b.Transitions['0'] = a;
-            b.Transitions['1'] = c;
+            b.Transitions['1'] = a;
 
             c.Transitions['0'] = c;
             c.Transitions['1'] = c;
 
-            d.Transitions['0'] = d;
+            d.Transitions['0'] = c;
             d.Transitions['1'] = d;
         }
 
